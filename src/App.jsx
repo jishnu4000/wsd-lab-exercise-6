@@ -1,9 +1,13 @@
-import './App.css'
+import NavBar from './components/NavBar'
+import RegistrationForm from './components/RegistrationForm'
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+    <NavBar />
+    <div className='min-h-screen bg-slate-100 flex items-center justify-center'>
+      <RegistrationForm />
+    </div>
+    </>
   )
 }
