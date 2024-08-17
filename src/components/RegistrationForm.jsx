@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
+import { ValidationMessage } from "./ValidationMessage";
 
 const RegistrationForm = () => {
   const [regName, setRegName] = useState('');
@@ -140,25 +141,7 @@ const RegistrationForm = () => {
                 className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regName ? formErrors.name ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
-            {
-              regName ? (
-                formErrors.name ? (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.name}
-                  </p>
-                ) : (
-                  <p className="text-green-600 font-semibold text-sm mt-1 mx-3">
-                    Valid name
-                  </p>
-                )
-              ) : (
-                formErrors.name && (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.name}
-                  </p>
-                )
-              )
-            }
+            <ValidationMessage fieldName={regName} errorMsg={formErrors.name} validMsg={`Valid name`} />
           </div>
 
 
@@ -178,25 +161,7 @@ const RegistrationForm = () => {
                 className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regEmail ? formErrors.email ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
-            {
-              regEmail ? (
-                formErrors.email ? (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.email}
-                  </p>
-                ) : (
-                  <p className="text-green-600 font-semibold text-sm mt-1 mx-3">
-                    Valid email
-                  </p>
-                )
-              ) : (
-                formErrors.email && (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.email}
-                  </p>
-                )
-              )
-            }
+            <ValidationMessage fieldName={regEmail} errorMsg={formErrors.email} validMsg={`Valid email`} />
           </div>
 
           {/* DOB Input */}
@@ -215,25 +180,7 @@ const RegistrationForm = () => {
                 className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regDateOfBirth ? formErrors.dateOfBirth ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
-            {
-              regDateOfBirth ? (
-                formErrors.dateOfBirth ? (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.dateOfBirth}
-                  </p>
-                ) : (
-                  <p className="text-green-600 font-semibold text-sm mt-1 mx-3">
-                    Valid date of birth
-                  </p>
-                )
-              ) : (
-                formErrors.dateOfBirth && (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.dateOfBirth}
-                  </p>
-                )
-              )
-            }
+            <ValidationMessage fieldName={regDateOfBirth} errorMsg={formErrors.dateOfBirth} validMsg={`Valid date of birth`} />
           </div>
 
           <div>
@@ -251,25 +198,7 @@ const RegistrationForm = () => {
                 className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regPassword ? formErrors.password ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
-            {
-              regPassword ? (
-                formErrors.password ? (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.password}
-                  </p>
-                ) : (
-                  <p className="text-green-600 font-semibold text-sm mt-1 mx-3">
-                    Valid password
-                  </p>
-                )
-              ) : (
-                formErrors.password && (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.password}
-                  </p>
-                )
-              )
-            }
+            <ValidationMessage fieldName={regPassword} errorMsg={formErrors.password} validMsg={`Valid password`} />
           </div>
 
           <div>
@@ -287,25 +216,7 @@ const RegistrationForm = () => {
                 className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regConfirmPassword ? formErrors.confirmPassword ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
-            {
-              regConfirmPassword ? (
-                formErrors.confirmPassword ? (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.confirmPassword}
-                  </p>
-                ) : (
-                  <p className="text-green-600 font-semibold text-sm mt-1 mx-3">
-                    Password confirmed
-                  </p>
-                )
-              ) : (
-                formErrors.confirmPassword && (
-                  <p className="text-red-600 font-semibold text-sm mt-1 mx-3">
-                    {formErrors.confirmPassword}
-                  </p>
-                )
-              )
-            }
+            <ValidationMessage fieldName={regConfirmPassword} errorMsg={formErrors.confirmPassword} validMsg={`Password confirmed`} />
           </div>
 
           <div>
