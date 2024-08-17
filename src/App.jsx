@@ -1,7 +1,7 @@
 import NavBar from './components/NavBar'
 import RegistrationForm from './components/RegistrationForm'
 
-export default function App() {
+const App = () => {
   return (
     <>
     <NavBar />
@@ -11,3 +11,5 @@ export default function App() {
     </>
   )
 }
+
+export default App
