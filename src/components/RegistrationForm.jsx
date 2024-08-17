@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
-import { ValidationMessage } from "./ValidationMessage";
+import ValidationMessage from './ValidationMessage';
 
 const RegistrationForm = () => {
   const [regName, setRegName] = useState('');
