@@ -115,7 +115,7 @@ const RegistrationForm = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           alt="Your Company"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+          src="https://tailwindui.com/img/logos/mark.svg?color=blue&shade=600"
           className="mx-auto h-10 w-auto"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -138,7 +138,7 @@ const RegistrationForm = () => {
                 value={regName}
                 onChange={handleNameChange}
                 placeholder="Minimum 3 alphabetic letters"
-                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regName ? formErrors.name ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
+                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${ regName ? formErrors.name ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
             <ValidationMessage fieldName={regName} errorMsg={formErrors.name} validMsg={`Valid name`} />
@@ -158,7 +158,7 @@ const RegistrationForm = () => {
                 value={regEmail}
                 onChange={handleEmailChange}
                 placeholder="example@example.com"
-                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regEmail ? formErrors.email ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
+                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${ regEmail ? formErrors.email ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
             <ValidationMessage fieldName={regEmail} errorMsg={formErrors.email} validMsg={`Valid email`} />
@@ -177,7 +177,7 @@ const RegistrationForm = () => {
                 value={regDateOfBirth}
                 onChange={handleDateOfBirthChange}
                 placeholder="YYYY-MM-DD format"
-                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regDateOfBirth ? formErrors.dateOfBirth ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
+                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${ regDateOfBirth ? formErrors.dateOfBirth ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
             <ValidationMessage fieldName={regDateOfBirth} errorMsg={formErrors.dateOfBirth} validMsg={`Valid date of birth`} />
@@ -195,7 +195,7 @@ const RegistrationForm = () => {
                 value={regPassword}
                 onChange={handlePasswordChange}
                 placeholder="Minimum 8 characters"
-                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regPassword ? formErrors.password ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
+                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${ regPassword ? formErrors.password ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
             <ValidationMessage fieldName={regPassword} errorMsg={formErrors.password} validMsg={`Valid password`} />
@@ -213,7 +213,7 @@ const RegistrationForm = () => {
                 value={regConfirmPassword}
                 onChange={handleConfirmPasswordChange}
                 placeholder="Must match given password"
-                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${ regConfirmPassword ? formErrors.confirmPassword ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
+                className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-2 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 ${ regConfirmPassword ? formErrors.confirmPassword ? 'ring-red-600' : 'ring-green-600' : 'ring-gray-300'}`}
               />
             </div>
             <ValidationMessage fieldName={regConfirmPassword} errorMsg={formErrors.confirmPassword} validMsg={`Password confirmed`} />
@@ -222,7 +222,7 @@ const RegistrationForm = () => {
           <div>
             <button
               type="submit"
-              className={`flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${ allowSubmit ? '' : 'opacity-50 cursor-not-allowed'}`}
+              className={`flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 ${ allowSubmit ? '' : 'opacity-50 cursor-not-allowed'}`}
             >
                 Register
             </button>
