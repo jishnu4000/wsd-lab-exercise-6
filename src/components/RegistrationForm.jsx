@@ -3,19 +3,22 @@ import { useState } from "react";
 import ValidationMessage from './ValidationMessage';
 
 const RegistrationForm = () => {
+  // variables for registration form
   const [regName, setRegName] = useState('');
   const [regEmail, setRegEmail] = useState('');
   const [regDateOfBirth, setRegDateOfBirth] = useState('');
   const [regPassword, setRegPassword] = useState('');
   const [regConfirmPassword, setRegConfirmPassword] = useState('');
 
+  // variables for error message storage and controlling submit
   const [formErrors, setFormErrors] = useState({});
   const [allowSubmit, setAllowSubmit] = useState(true);
 
+  // event handler for name field
   const handleNameChange = (event) => {
     const inputName = event.target.value;
     setRegName(inputName);
-
+    
     if (inputName === '') {
       setFormErrors({ ...formErrors, name: 'Name is required.' });
       setAllowSubmit(false);
@@ -28,11 +31,12 @@ const RegistrationForm = () => {
       setAllowSubmit(Object.keys(rest).length === 0); // Only allow submit if there are no errors
     }
   };
-
+  
+  // event handler for email field
   const handleEmailChange = (event) => {
     const inputEmail = event.target.value;
     setRegEmail(inputEmail);
-
+    
     if (inputEmail === '') {
       setFormErrors({ ...formErrors, email: 'Email is required.' });
       setAllowSubmit(false);
@@ -45,7 +49,8 @@ const RegistrationForm = () => {
       setAllowSubmit(Object.keys(rest).length === 0);
     }
   }
-
+  
+  // event handler for date of birth field
   const handleDateOfBirthChange = (event) => {
     const inputDateOfBirth = event.target.value;
     setRegDateOfBirth(inputDateOfBirth);
@@ -56,7 +61,7 @@ const RegistrationForm = () => {
     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < inputDate.getDate())) {
       age -= 1;
     }
-
+    
     if (inputDateOfBirth === '') {
       setFormErrors({ ...formErrors, dateOfBirth: 'Date of Birth is required.' });
       setAllowSubmit(false);
@@ -75,11 +80,12 @@ const RegistrationForm = () => {
       setAllowSubmit(Object.keys(rest).length === 0);
     }
   }
-
+  
+  // event handler for password field
   const handlePasswordChange = (event) => {
     const inputPassword = event.target.value;
     setRegPassword(inputPassword);
-
+    
     if (inputPassword === '') {
       setFormErrors({ ...formErrors, password: 'Password is required.' });
       setAllowSubmit(false);
@@ -92,7 +98,8 @@ const RegistrationForm = () => {
       setAllowSubmit(Object.keys(rest).length === 0);
     }
   }
-
+  
+  // event handler for confirm password field
   const handleConfirmPasswordChange = (event) => {
     const inputConfirmPassword = event.target.value;
     setRegConfirmPassword(inputConfirmPassword);
