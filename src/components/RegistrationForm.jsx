@@ -180,7 +180,7 @@ const RegistrationForm = () => {
               <input
                 id="dateOfBirth"
                 name="dateOfBirth"
-                type="text"
+                type="date"
                 value={regDateOfBirth}
                 onChange={handleDateOfBirthChange}
                 placeholder="YYYY-MM-DD format"
